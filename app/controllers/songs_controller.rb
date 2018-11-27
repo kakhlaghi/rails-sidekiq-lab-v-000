@@ -24,7 +24,7 @@ class SongsController < ApplicationController
   end
 
   def upload
-    SongsWorker.perform_async(songs_file.path)
+    SongsWorker.perform_async(.path)
     redirect_to songs_path
   end
 
